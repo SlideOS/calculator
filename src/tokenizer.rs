@@ -1,5 +1,5 @@
 #[derive(Debug, Clone, PartialEq)]
-enum Token{
+pub enum Token{
     Number(f64),
     Plus,
     Minus,
@@ -9,7 +9,7 @@ enum Token{
     RightParen,
     Eof,
 }
-fn tokenize(input: &str) -> Result<Vec<Token>, &'static str>{
+pub fn tokenize(input: &str) -> Result<Vec<Token>, &'static str>{
     let mut tokens: Vec<Token>=Vec::new();
     let mut string_number = String::new();
     let mut number: f64;
